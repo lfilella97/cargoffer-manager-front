@@ -14,5 +14,12 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "new-cap": [
+      "error",
+      {
+        capIsNewExceptions: ["NgModule", "Component"],
+      },
+    ],
+  },
 };
