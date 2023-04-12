@@ -14,6 +14,6 @@ export class TasksService {
   constructor(@Inject(HttpClient) private readonly http: HttpClient) {}
 
   getTasks() {
-    return this.http.get<Task[]>(`${this.tasksUrl}`);
+    return this.http.get<Task[]>(`${this.tasksUrl}/tasks`);
   }
 }

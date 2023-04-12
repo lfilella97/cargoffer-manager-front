@@ -6,6 +6,8 @@ import { NotFoundAppComponent } from "./components/pages/not-found-app/not-found
 import { HomeAppComponent } from "./components/pages/home-app/home-app.component";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { HttpClientModule } from "@angular/common/http";
+import { TaskComponent } from "./components/task/task.component";
+import { TasksComponent } from "./components/tasks/tasks.component";
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { HttpClientModule } from "@angular/common/http";
     HomeAppComponent,
     NotFoundAppComponent,
     NavBarComponent,
+    TaskComponent,
+    TasksComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
