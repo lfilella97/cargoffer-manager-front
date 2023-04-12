@@ -8,6 +8,12 @@ module.exports = {
     {
       extends: ["xo-typescript", "prettier"],
       files: ["*.ts", "*.tsx"],
+      rules: {
+        "@typescript-eslint/consistent-type-definitions": [
+          "error",
+          "interface",
+        ],
+      },
     },
   ],
   parserOptions: {
@@ -18,7 +24,13 @@ module.exports = {
     "new-cap": [
       "error",
       {
-        capIsNewExceptions: ["NgModule", "Component"],
+        capIsNewExceptions: [
+          "NgModule",
+          "Component",
+          "Injectable",
+          "Inject",
+          "Input",
+        ],
       },
     ],
   },
