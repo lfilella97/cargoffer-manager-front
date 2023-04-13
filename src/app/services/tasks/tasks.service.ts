@@ -16,4 +16,9 @@ export class TasksService {
   getTasks() {
     return this.http.get<Task[]>(`${this.tasksUrl}/tasks`);
   }
+
+  createTask(task: Task) {
+    const response = this.http.post<any>(`${this.tasksUrl}/tasks/create`, task);
+    return response;
+  }
 }

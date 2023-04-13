@@ -1,9 +1,12 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { StoreModule } from "@ngrx/store";
+import { ReactiveFormsModule } from "@angular/forms";
+
+import { CreateTaskComponent } from "./../components/create-task/create-task.component";
+import { TasksService } from "./../services/tasks/tasks.service";
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
+  providers: [TasksService],
 })
 export class TasksModule {}
