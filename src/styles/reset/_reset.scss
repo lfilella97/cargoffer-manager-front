@@ -42,3 +42,16 @@ a:visited {
 p {
   margin: 0;
 }
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: none;
+}

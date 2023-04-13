@@ -7,6 +7,7 @@ import { type Task } from "src/app/tasks.model";
   selector: "app-tasks",
   templateUrl: "./tasks.component.html",
   styleUrls: ["./tasks.component.scss"],
+  providers: [TasksService],
 })
 export class TasksComponent {
   tasks: Task[] = [];
@@ -16,7 +17,15 @@ export class TasksComponent {
   ) {}
 
   getTasks() {
-    return this.tasksService.getTasks().subscribe({
+    this.tasksService.getTasks().subscribe({
+      next: (allTasks) => {
+        this.tasks = allTasks;
+      },
+    });
+  }
+
+  deleteTask(task: Task) {
+    this.tasksService.deleteTasksById(task).subscribe({
       next: (allTasks) => {
         this.tasks = allTasks;
       },
