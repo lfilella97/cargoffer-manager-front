@@ -1,7 +1,7 @@
 <nav class="nav-bar">
   <h1 class="nav-bar__title">Cargoffer Manager</h1>
   <a class="nav-bar__link" routerLink="/new-task" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-    *ngIf="!isNewTaskPage()">Create New Task</a>
+    *ngIf="!isNewTaskPage()">New Task</a>
   <a class="nav-bar__link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
     *ngIf="isNewTaskPage()">Home</a>
 </nav>

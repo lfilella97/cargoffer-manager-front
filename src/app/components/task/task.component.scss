@@ -41,7 +41,7 @@
   }
 
   &__title {
-    color: #e31281;
+    color: #155860;
     font-size: 1.3rem;
     font-weight: 600;
     padding: 2px;
@@ -52,6 +52,7 @@
 
   &__description {
     padding: 10px;
+    align-self: center;
   }
 
   &__status {
@@ -62,5 +63,14 @@
     color: #fff;
     border-radius: 10px;
     min-width: 75px;
+  }
+
+  &__button {
+    background: #e31281;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    width: 70px;
   }
 }
