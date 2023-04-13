@@ -1,9 +1,15 @@
 .task {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  box-shadow: 1px 1px 8px rgba(227, 18, 129, 0.597);
+  border: 1px solid rgba(0, 0, 0, 0.597);
   border-radius: 10px;
+  background-color: #fff;
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__info {
     display: flex;
@@ -35,9 +41,13 @@
   }
 
   &__title {
+    color: #e31281;
     font-size: 1.3rem;
     font-weight: 600;
-    padding: 10px;
+    padding: 2px;
+    margin: 8px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
   }
 
   &__description {
@@ -45,7 +55,12 @@
   }
 
   &__status {
-    padding: 10px;
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e31281;
+    color: #fff;
+    border-radius: 10px;
+    min-width: 75px;
   }
 }

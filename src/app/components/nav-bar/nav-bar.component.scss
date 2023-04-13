@@ -1,17 +1,23 @@
 .nav-bar {
   height: 90px;
   padding: 0 20px;
-  margin-bottom: 20px;
-  background-color: #e31281;
+  background-color: #fff;
   display: flex;
   align-items: center;
-  border-bottom: 10px solid black;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
   justify-content: space-between;
-  h1 {
-    color: white;
 
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 3px black;
+  &__title {
+    color: #000;
+    text-decoration: underline #e31281;
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+
+  &__link {
+    background: #e31281;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
   }
 }
