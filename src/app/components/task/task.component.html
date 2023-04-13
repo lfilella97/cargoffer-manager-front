@@ -1,14 +1,12 @@
 <article class="task">
   <div class="task__main">
-    <span class="task__date" [class]="'task__date--' + task.category">Due date: {{ task.due_date| date : 'dd/MM'
+    <span class="task__date" [class]="'task__date--' + task.category">Due date: {{ task.dueDate| date : 'dd/MM'
       }}</span>
-    <div class="task__info">
 
-      <h3 class="task__title">{{ task.title }}</h3>
-      <span class="task__description">
-        {{ task.description }}
-      </span>
-    </div>
+    <h3 class="task__title">{{ task.title }}</h3>
+    <span class="task__description">
+      {{ task.description }}
+    </span>
   </div>
   <span class="task__status">{{ task.category }}</span>
 </article>

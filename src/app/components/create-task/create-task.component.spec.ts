@@ -1,17 +1,17 @@
 import { type ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { HomeAppComponent } from "./home-app.component";
+import { CreateTaskComponent } from "./create-task.component";
 
-describe("HomeAppComponent", () => {
-  let component: HomeAppComponent;
-  let fixture: ComponentFixture<HomeAppComponent>;
+describe("CreateTaskComponent", () => {
+  let component: CreateTaskComponent;
+  let fixture: ComponentFixture<CreateTaskComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomeAppComponent],
+      declarations: [CreateTaskComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomeAppComponent);
+    fixture = TestBed.createComponent(CreateTaskComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

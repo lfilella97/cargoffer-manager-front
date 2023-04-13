@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import { Component, Input } from "@angular/core";
 import { type Task } from "src/app/tasks.model";
 
@@ -12,7 +11,7 @@ export class TaskComponent {
     title: "",
     category: "",
     description: "",
-    due_date: "",
+    dueDate: "",
     _id: "",
   };
 
