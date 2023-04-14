@@ -10,3 +10,8 @@ export const deleteTasks = createAction(
   "[Tasks] delete Tasks",
   props<{ idTask: string }>()
 );
+
+export const updateTasks = createAction(
+  "[Tasks] update Tasks",
+  props<{ task: Task }>()
+);

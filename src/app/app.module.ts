@@ -15,6 +15,8 @@ import { CreateTaskComponent } from "./components/create-task/create-task.compon
 import { TasksService } from "./services/tasks/tasks.service";
 import { TasksModule } from "./store/tasks.module";
 import { reducer } from "./store/reducers/tasks.reducer";
+import { UpdateTaskComponent } from "./components/update-task/update-task.component";
+import { EditTaskAppComponent } from "./components/pages/edit-task-app/edit-task-app.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { reducer } from "./store/reducers/tasks.reducer";
     TasksComponent,
     CreateTaskComponent,
     CreateAppComponent,
+    UpdateTaskComponent,
+    EditTaskAppComponent,
   ],
   imports: [
     BrowserModule,
