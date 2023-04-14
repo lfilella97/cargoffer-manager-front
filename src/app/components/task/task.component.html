@@ -9,5 +9,5 @@
       {{ task.description }}
     </p>
   </div>
-  <span class="task__status">{{ task.category }}</span>
+  <button class="task__status" (click)="onEdit(task)">{{ task.category }}</button>
 </article>

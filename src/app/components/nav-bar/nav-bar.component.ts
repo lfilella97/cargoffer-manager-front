@@ -12,4 +12,8 @@ export class NavBarComponent {
   isNewTaskPage(): boolean {
     return this.router.url === "/new-task";
   }
+
+  isEditTaskPage(): boolean {
+    return this.router.url.includes("/edit-task");
+  }
 }
