@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 :host {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,6 +45,7 @@ p {
   margin: 0;
 }
 
+textarea,
 button,
 input {
   font-family: inherit;

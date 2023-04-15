@@ -1,3 +1,4 @@
+<app-filter (filterBy)="fiterTasksBy($event)"></app-filter>
 <ul>
   <li *ngFor="let task of tasks, index as i"><app-task [task]="task" [index]="i"
       (deleteTasksById)="deleteTask($event)"></app-task></li>
