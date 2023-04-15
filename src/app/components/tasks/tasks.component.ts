@@ -9,6 +9,8 @@ import { type Task } from "src/app/tasks.model";
   providers: [TasksService],
 })
 export class TasksComponent {
+  category = "";
+
   tasks: Task[] = [];
 
   constructor(
@@ -17,6 +19,14 @@ export class TasksComponent {
 
   getTasks() {
     this.tasksService.getTasks().subscribe({
+      next: (allTasks) => {
+        this.tasks = allTasks;
+      },
+    });
+  }
+
+  fiterTasksBy(category: string) {
+    this.tasksService.getTasks(category).subscribe({
       next: (allTasks) => {
         this.tasks = allTasks;
       },

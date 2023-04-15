@@ -26,7 +26,8 @@ export class TaskComponent {
 
   constructor(
     @Inject(Store) private readonly store: Store,
-    @Inject(Router) private readonly router: Router
+    @Inject(Router) private readonly router: Router,
+    @Inject(TasksService) private readonly tasksService: TasksService
   ) {}
 
   onDelete(task: Task) {
@@ -34,6 +35,7 @@ export class TaskComponent {
   }
 
   async onEdit(task: Task) {
+    this.tasksService.emptyTasks();
     await this.router.navigateByUrl(`/edit-task/${task._id!}`);
   }
 }

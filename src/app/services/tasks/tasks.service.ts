@@ -5,6 +5,7 @@ import { type Task } from "src/app/tasks.model";
 import { Store } from "@ngrx/store";
 import {
   deleteTasks,
+  emptyTasks,
   loadTasks,
   updateTasks,
 } from "src/app/store/actions/tasks.actions";
@@ -24,8 +25,10 @@ export class TasksService {
     @Inject(Store) private readonly store: Store
   ) {}
 
-  getTasks(): Observable<Task[]> {
-    const response = this.http.get<Task[]>(`${this.tasksUrl}/tasks`);
+  getTasks(category?: string): Observable<Task[]> {
+    const response = this.http.get<Task[]>(
+      `${this.tasksUrl}/tasks?category=${category ? category : ""}`
+    );
     response.subscribe({
       next: (tasks) => {
         this.store.dispatch(loadTasks({ tasks }));
@@ -66,5 +69,10 @@ export class TasksService {
       },
     });
     return this.store.select(selectTasksState);
+  }
+
+  emptyTasks() {
+    this.store.dispatch(emptyTasks());
+    this.store.select(selectTasksState);
   }
 }

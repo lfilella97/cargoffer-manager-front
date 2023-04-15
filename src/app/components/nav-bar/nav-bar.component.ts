@@ -1,5 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { Router } from "@angular/router";
+import { TasksService } from "src/app/services/tasks/tasks.service";
 
 @Component({
   selector: "app-nav-bar",
@@ -7,7 +8,10 @@ import { Router } from "@angular/router";
   styleUrls: ["./nav-bar.component.scss"],
 })
 export class NavBarComponent {
-  constructor(@Inject(Router) private readonly router: Router) {}
+  constructor(
+    @Inject(Router) private readonly router: Router,
+    @Inject(TasksService) private readonly tasksService: TasksService
+  ) {}
 
   isNewTaskPage(): boolean {
     return this.router.url === "/new-task";
@@ -15,5 +19,9 @@ export class NavBarComponent {
 
   isEditTaskPage(): boolean {
     return this.router.url.includes("/edit-task");
+  }
+
+  onClick() {
+    this.tasksService.emptyTasks();
   }
 }

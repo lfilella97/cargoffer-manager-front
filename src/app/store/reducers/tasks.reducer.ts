@@ -1,6 +1,11 @@
 import { createFeature, createReducer, on } from "@ngrx/store";
 import { type Task } from "src/app/tasks.model";
-import { updateTasks, deleteTasks, loadTasks } from "../actions/tasks.actions";
+import {
+  updateTasks,
+  deleteTasks,
+  loadTasks,
+  emptyTasks,
+} from "../actions/tasks.actions";
 
 const initialState: Task[] = [
   { category: "", description: "", dueDate: "", title: "" },
@@ -18,7 +23,8 @@ export const tasksFeature = createFeature({
       ...state.map((stateTask) =>
         stateTask._id === task.task._id ? task.task : stateTask
       ),
-    ])
+    ]),
+    on(emptyTasks, (): Task[] => [])
   ),
 });
 

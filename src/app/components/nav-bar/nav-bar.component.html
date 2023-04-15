@@ -1,11 +1,9 @@
-<nav class="nav-bar">
+<div class="nav-bar">
   <h1 class="nav-bar__title">Cargoffer Manager</h1>
-  <div class="nav-bar__links">
+  <nav class="nav-bar__links">
     <a class="nav-bar__link" routerLink="/new-task" routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }" *ngIf="!isNewTaskPage()">New Task</a>
     <a class="nav-bar__link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      *ngIf="isNewTaskPage()">Home</a>
-    <a class="nav-bar__link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      *ngIf="isEditTaskPage()">Home</a>
-  </div>
-</nav>
+      *ngIf="isNewTaskPage() || isEditTaskPage()" (click)="onClick()">Home</a>
+  </nav>
+</div>

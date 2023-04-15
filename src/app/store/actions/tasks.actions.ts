@@ -6,6 +6,8 @@ export const loadTasks = createAction(
   props<{ tasks: Task[] }>()
 );
 
+export const emptyTasks = createAction("[Tasks] Empty Tasks");
+
 export const deleteTasks = createAction(
   "[Tasks] delete Tasks",
   props<{ idTask: string }>()

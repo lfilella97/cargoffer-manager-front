@@ -1,6 +1,6 @@
 .task {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   border: 1px solid rgba(0, 0, 0, 0.597);
   border-radius: 10px;
@@ -56,13 +56,13 @@
   }
 
   &__status {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: #e31281;
-    color: #fff;
+    font-size: 1rem;
+    color: white;
     border-radius: 10px;
-    min-width: 75px;
+    margin: 10px;
+    min-width: 70px;
+    min-height: 32px;
   }
 
   &__button {
@@ -72,5 +72,12 @@
     border-radius: 10px;
     margin: 10px;
     width: 70px;
+  }
+
+  &__category {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    width: 63px;
   }
 }
