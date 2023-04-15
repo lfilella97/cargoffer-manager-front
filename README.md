@@ -7,10 +7,11 @@ Cargoffer Task Manager is an Angular-based application for managing tasks and pr
 ---
 
 - [Preview](#preview)
-- [Testing](#testing)
-- [Tech stack](#tech-stack)
 - [Getting started](#getting-started)
-- [Dependencies](#dependencies)
+- [Features](#features)
+- [Back](#back)
+- [Tech stack](#tech-stack)
+- [Conclusion](#conclusion)
 
 # Preview
 
@@ -44,9 +45,12 @@ The following features are available in the application:
 
 This application was developed as a technical test for the company Cargoffer. Angular was used as the main technology for building the application. The code is hosted on GitHub and the production version is deployed on Netlify.
 
+Deployed with netlify: https://cargoffer-manager.netlify.app/
+
 ## Back
 
 https://github.com/lfilella97/cargoffer-back
+Deployed with render: https://cargoffer-back.onrender.com
 
 ## Conclusion
 
